@@ -40,8 +40,8 @@ Switch-NetAdapter.bat
 
 To fit your enviromment and needs, you must change the variables name in Switch-NetAdapter.ps1:
 
-```
-...powershell
+```powershell
+...
 $wifiNet = "YOUR NETADAPTER NAME"
 $cableNet = "YOUR NETADAPTER NAME"
 ...
@@ -67,7 +67,6 @@ Running Script to switch Net-Adapter
 Switch between Wi-Fi - Ethernet
 Enabling: Wi-Fi Disabling: Ethernet Disabling: Proxy
 Wi-Fi Enabled and Proxy Disabled
-Wi-Fi and Ethernet does not Exist. Set then properly
 Press any key to continue:
 ```
 

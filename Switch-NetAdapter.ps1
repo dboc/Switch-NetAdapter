@@ -58,7 +58,7 @@ foreach ($adapter in (Get-NetAdapter))
     }
 }
 if($wifiEnabled -and $cableEnabled){
-    Write-Host "# Both are Enabled, so disable $cableNet" -ForegroundColor Yellow
+    Write-Host "Warning: Both are Enabled, so disable $cableNet" -ForegroundColor Yellow
     Write-Host "Enabling:$wifiNet " -ForegroundColor Green -NoNewline
     Write-Host "Disabling:$cableNet " -ForegroundColor Red -NoNewline
     Disable-NetAdapter -Name $cableNet
@@ -71,6 +71,6 @@ if($wifiEnabled -and $cableEnabled){
     Write-Host "$wifiNet Enabled and " -ForegroundColor Green -NoNewline
     Write-Host "Proxy Disabled" -ForegroundColor Red
 }elseif((-not $wifiEnabled) -and (-not $cableEnabled)){
-    Write-Host "$wifiNet and $cableNet does not Exist. Set then properly" -ForegroundColor Red
+    Write-Host "Erro: $wifiNet and $cableNet does not Exist. Set then properly" -ForegroundColor Red
 }
 Read-Host "Press any key to continue"
