@@ -12,26 +12,25 @@
 
 # Switch-NetAdapter
 
-> Powershell Script -Switch NetAdapter between two desire adapter
+> Powershell Script - Switch NetAdapter between two desire adapter
 
 Sometimes it is necessary change between two Net Adapters in Windows.
-In my case, i made a script to change between a Wifi Network without Proxy Settings and a Cable With Proxy Settings.
-This script automate the process to change between this two network.
-To make it work for you, you need to change the NetAdapter Name in Variables $wifiNet and $cableNet
+In my case, i made a script to change between a Wifi Network without Proxy Settings and a Cable with Proxy Settings.
+This script automates the process to change between this two network.
+To make it work for you, you need to change the NetAdapter Name in variables $wifiNet and $cableNet
 
 ## How It Works
 
-The script loop for all Net-Adpater and look for Wifi Network and Cable Network.
+The script goes through all Net-Adpater and looks for Wifi Network and Cable Network.
 If Wifi Network is disable, then enable it and disable Cable Network and Proxy Settings
 If Cable Network is disable, then enable it and disable Wife Network and Enable Proxy Settings
-
 
 
 ## Requirements
  - powershell
 
 ## Installation
-You have just execute the script as Admin. Or execute the Switch-NetAdapter.bat in same folder of Switch-NetAdapter.ps1.
+Just execute Switch-NetAdapter.ps1 as Admin. Or execute the Switch-NetAdapter.bat in same folder of Switch-NetAdapter.ps1.
 
 ```
 git clone https://github.com/dboc/Switch-NetAdapter.git ./somedirectory
@@ -39,7 +38,7 @@ Switch-NetAdapter.bat
 ```
 ## Config
 
-To fit you enviromment and needs, you must change the variables name in Switch-NetAdapter.ps1:
+To fit your enviromment and needs, you must change the variables name in Switch-NetAdapter.ps1:
 
 ```
 ...powershell
@@ -53,8 +52,8 @@ $cableNet = "YOUR NETADAPTER NAME"
 Change the variables in Switch-NetAdapter.ps1
 ```powershell
 ...
-$wifiNet = "YOUR NETADAPTER NAME"
-$cableNet = "YOUR NETADAPTER NAME"
+$wifiNet = "Wi-Fi"
+$cableNet = "Ethernet"
 ...
 ```
 Then execute:
@@ -63,8 +62,13 @@ Switch-NetAdapter.bat
 ```
 
 After that you would see the output:
-```powershell
-
+```
+Running Script to switch Net-Adapter
+Switch between Wi-Fi - Ethernet
+Enabling: Wi-Fi Disabling: Ethernet Disabling: Proxy
+Wi-Fi Enabled and Proxy Disabled
+Wi-Fi and Ethernet does not Exist. Set then properly
+Press any key to continue:
 ```
 
 ## Contributing
